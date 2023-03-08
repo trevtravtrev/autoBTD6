@@ -64,9 +64,12 @@ namespace autoBTD6
             firstLoop = true;
             while (startToggleButtonFlag == true)
             {
+                ValidateAbilityCycleRange();
+                ValidateAbilityPressRange();
                 Random random = new Random();
                 if (firstLoop == true)
                 {
+                    ValidateAbilityCycleRange();
                     await Task.Delay(random.Next(int.Parse(_abilityCycleFrom.Text) * 1000, int.Parse(_abilityCycleTo.Text) * 1000));
                     firstLoop = false;
                 }
@@ -77,12 +80,14 @@ namespace autoBTD6
                         for (int j = 0; j < int.Parse(_amountComboBoxes[i].Text); j++)
                         {
                             SendKeys.SendWait((i + 1).ToString());
+                            ValidateAbilityPressRange();
                             decimal abilityPressFrom = decimal.Parse(_abilityPressFrom.Text) * 1000;
                             decimal abilityPressTo = decimal.Parse(_abilityPressTo.Text) * 1000;
                             await Task.Delay(random.Next((int)abilityPressFrom, (int)abilityPressTo));
                         }
                     }
                 }
+                ValidateAbilityCycleRange();
                 await Task.Delay(random.Next(int.Parse(_abilityCycleFrom.Text) * 1000, int.Parse(_abilityCycleTo.Text) * 1000));
             }
             return;
@@ -100,6 +105,28 @@ namespace autoBTD6
             {
                 startToggleButtonFlag = false;
                 _startToggleButton.Text = "Start";
+            }
+        }
+
+        private void ValidateAbilityCycleRange()
+        {
+            if (int.Parse(_abilityCycleFrom.Text) > int.Parse(_abilityCycleTo.Text))
+            {
+                string from = _abilityCycleFrom.Text;
+                string to = _abilityCycleTo.Text;
+                _abilityCycleFrom.SelectedItem = to;
+                _abilityCycleTo.SelectedItem = from;
+            }
+        }
+
+        private void ValidateAbilityPressRange()
+        {
+            if (decimal.Parse(_abilityPressFrom.Text) > decimal.Parse(_abilityPressTo.Text))
+            {
+                string from = _abilityPressFrom.Text;
+                string to = _abilityPressTo.Text;
+                _abilityPressFrom.SelectedItem = to;
+                _abilityPressTo.SelectedItem = from;
             }
         }
     }
