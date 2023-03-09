@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Threading;
-<<<<<<< Updated upstream
-using System.Threading.Tasks;
-=======
 using System.Linq;
 using System.Runtime.InteropServices;
 using AutoIt;
 
->>>>>>> Stashed changes
 
 namespace autoBTD6
 {
@@ -32,13 +28,6 @@ namespace autoBTD6
         private readonly ComboBox _abilityPressTo;
 
         private readonly CheckBox _BTD6ActiveWindow;
-
-<<<<<<< Updated upstream
-
-        private bool startToggleButtonFlag;
-        private bool firstLoop;
-=======
->>>>>>> Stashed changes
 
         public EventHandler(Form1 form)
         {
@@ -70,29 +59,7 @@ namespace autoBTD6
             _abilityCycleTo = form.abilityCycleComboBoxTo;
             _abilityPressFrom = form.abilityPressComboBoxFrom;
             _abilityPressTo = form.abilityPressComboBoxTo;
-
-<<<<<<< Updated upstream
-            _startToggleButton = form.startToggleButton;
-
-            startToggleButtonFlag = false;
-        }
-
-        public async Task PressAbilities()
-        {
-            firstLoop = true;
-            while (startToggleButtonFlag == true)
-            {
-                ValidateAbilityCycleRange();
-                ValidateAbilityPressRange();
-                Random random = new Random();
-                if (firstLoop == true)
-                {
-                    ValidateAbilityCycleRange();
-                    await Task.Delay(random.Next(int.Parse(_abilityCycleFrom.Text) * 1000, int.Parse(_abilityCycleTo.Text) * 1000));
-                    firstLoop = false;
-                }
-                for (int i = 0; i < _abilityCheckBoxes.Count; i++)
-=======
+  
             // Settings
             _BTD6ActiveWindow = form.BTD6ActiveWindow;
         }
@@ -108,7 +75,6 @@ namespace autoBTD6
                 Thread.Sleep(random.Next(pressAbilitiesParams.abilityCycleComboBoxFrom, pressAbilitiesParams.abilityCycleComboBoxTo));
 
                 for(int i = 0; i < pressAbilitiesParams.abilityCheckDict.Count; i++)
->>>>>>> Stashed changes
                 {
                     // if ability checkbox is checked
                     if (pressAbilitiesParams.abilityCheckDict.ElementAt(i).Value)
@@ -119,34 +85,6 @@ namespace autoBTD6
                         // trigger 'ability' keypress for corresponding number key
                         for (int j = 0; j < amount; j++)
                         {
-<<<<<<< Updated upstream
-                            SendKeys.SendWait((i + 1).ToString());
-                            ValidateAbilityPressRange();
-                            decimal abilityPressFrom = decimal.Parse(_abilityPressFrom.Text) * 1000;
-                            decimal abilityPressTo = decimal.Parse(_abilityPressTo.Text) * 1000;
-                            await Task.Delay(random.Next((int)abilityPressFrom, (int)abilityPressTo));
-                        }
-                    }
-                }
-                ValidateAbilityCycleRange();
-                await Task.Delay(random.Next(int.Parse(_abilityCycleFrom.Text) * 1000, int.Parse(_abilityCycleTo.Text) * 1000));
-            }
-            return;
-        }
-
-        public void ToggleStartButton()
-        {
-            if (startToggleButtonFlag == false)
-            {
-                startToggleButtonFlag = true;
-                _startToggleButton.Text = "Stop";
-
-            }
-            else
-            {
-                startToggleButtonFlag = false;
-                _startToggleButton.Text = "Start";
-=======
                             if (pressAbilitiesParams.BTD6ActiveWindow)
                             {
                                 // find the btd6 window
@@ -174,7 +112,6 @@ namespace autoBTD6
                         }
                     }
                 }
->>>>>>> Stashed changes
             }
         }
 

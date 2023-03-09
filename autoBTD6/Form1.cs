@@ -10,13 +10,11 @@ namespace autoBTD6
         private EventHandler _eventHandler;
         private ToolTip abilityCycleInfoToolTip = new ToolTip();
         private ToolTip abilityPressInfoToolTip = new ToolTip();
-<<<<<<< Updated upstream
-=======
+
         private ToolTip BTD6ActiveWindowInfoToolTip = new ToolTip();
 
         private bool _isRunning = false;
         private Thread _mainThread;
->>>>>>> Stashed changes
 
         public Form1()
         {
@@ -61,10 +59,6 @@ namespace autoBTD6
 
         private async void startToggleButton_Click(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-            _eventHandler.ToggleStartButton();
-            await _eventHandler.PressAbilities();
-=======
             if (_isRunning)
             {
                 _isRunning = false;
@@ -89,7 +83,6 @@ namespace autoBTD6
                 _mainThread = new Thread(new ParameterizedThreadStart(_eventHandler.PressAbilities));
                 _mainThread.Start(pressAbilitiesParams);
             }    
->>>>>>> Stashed changes
         }
 
         // info for ability cycle
