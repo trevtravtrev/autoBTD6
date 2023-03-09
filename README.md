@@ -16,7 +16,7 @@ autoBTD6 is a Windows Desktop Application written in C# with .NET Framework that
   <img src="demo.gif" alt="demo" width="600" />
 </p>
 
-##Features
+## Features
 
 - Automate ability usage in Bloons Tower Defense 6 (BTD6).  
 - Dynamically select abilities to use.  
@@ -26,7 +26,7 @@ autoBTD6 is a Windows Desktop Application written in C# with .NET Framework that
 - Simple and easy-to-use interface.  
 - Open-source and customizable.  
 
-##Dependencies
+## Dependencies
 
 autoBTD6 has following dependencies:  
 - Windows operating system  
@@ -34,18 +34,18 @@ autoBTD6 has following dependencies:
 - `user32.dll` for finding windows  
 - AutoIt v3 for ability triggering  
 
-##Interface
+## Interface
 <p align="center">
   <img src="interface.jpg" alt="interface" width="600" />
 </p>
 
-##How to use
+## How to use
 
 1. Download the latest release from the [releases page](https://github.com/trevtravtrev/autoBTD6/releases).
 2. Extract the contents of the zip file to a location of your choice.
 3. Run `autoBTD6.exe`.
 
-##Settings
+## Settings
 
 The following settings are available:
 
