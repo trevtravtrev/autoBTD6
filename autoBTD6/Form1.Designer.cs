@@ -60,6 +60,10 @@
             this.ability9CheckBox = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.BTD6ActiveWindow = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // ability1ComboBox
@@ -689,11 +693,59 @@
             this.label9.Text = "ⓘ";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(318, 209);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(134, 13);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "BTD6 Active Window Only";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(318, 187);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 13);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Settings";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Script MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(449, 203);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(27, 25);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "ⓘ";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // BTD6ActiveWindow
+            // 
+            this.BTD6ActiveWindow.AutoSize = true;
+            this.BTD6ActiveWindow.Checked = true;
+            this.BTD6ActiveWindow.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.BTD6ActiveWindow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTD6ActiveWindow.Location = new System.Drawing.Point(478, 209);
+            this.BTD6ActiveWindow.Margin = new System.Windows.Forms.Padding(10);
+            this.BTD6ActiveWindow.Name = "BTD6ActiveWindow";
+            this.BTD6ActiveWindow.Size = new System.Drawing.Size(15, 14);
+            this.BTD6ActiveWindow.TabIndex = 36;
+            this.BTD6ActiveWindow.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 387);
+            this.Controls.Add(this.BTD6ActiveWindow);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.startToggleButton);
@@ -727,13 +779,14 @@
             this.Controls.Add(this.ability2CheckBox);
             this.Controls.Add(this.ability1CheckBox);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "autoBTD6";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+        public System.Windows.Forms.Button startToggleButton;
         public System.Windows.Forms.ComboBox ability1ComboBox;
         public System.Windows.Forms.ComboBox ability2ComboBox;
         public System.Windows.Forms.ComboBox ability3ComboBox;
@@ -743,18 +796,6 @@
         public System.Windows.Forms.ComboBox ability7ComboBox;
         public System.Windows.Forms.ComboBox ability8ComboBox;
         public System.Windows.Forms.ComboBox ability9ComboBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        public System.Windows.Forms.ComboBox abilityCycleComboBoxFrom;
-        public System.Windows.Forms.ComboBox abilityCycleComboBoxTo;
-        public System.Windows.Forms.ComboBox abilityPressComboBoxFrom;
-        public System.Windows.Forms.ComboBox abilityPressComboBoxTo;
-        public System.Windows.Forms.Button startToggleButton;
         public System.Windows.Forms.CheckBox ability1CheckBox;
         public System.Windows.Forms.CheckBox ability2CheckBox;
         public System.Windows.Forms.CheckBox ability3CheckBox;
@@ -764,8 +805,23 @@
         public System.Windows.Forms.CheckBox ability7CheckBox;
         public System.Windows.Forms.CheckBox ability8CheckBox;
         public System.Windows.Forms.CheckBox ability9CheckBox;
+        public System.Windows.Forms.ComboBox abilityCycleComboBoxFrom;
+        public System.Windows.Forms.ComboBox abilityCycleComboBoxTo;
+        public System.Windows.Forms.ComboBox abilityPressComboBoxFrom;
+        public System.Windows.Forms.ComboBox abilityPressComboBoxTo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.CheckBox BTD6ActiveWindow;
     }
 }
 

@@ -1,8 +1,7 @@
 ﻿using System;
+using System.Threading;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using ComboBox = System.Windows.Forms.ComboBox;
-using ToolTip = System.Windows.Forms.ToolTip;
+
 
 namespace autoBTD6
 {
@@ -11,6 +10,13 @@ namespace autoBTD6
         private EventHandler _eventHandler;
         private ToolTip abilityCycleInfoToolTip = new ToolTip();
         private ToolTip abilityPressInfoToolTip = new ToolTip();
+<<<<<<< Updated upstream
+=======
+        private ToolTip BTD6ActiveWindowInfoToolTip = new ToolTip();
+
+        private bool _isRunning = false;
+        private Thread _mainThread;
+>>>>>>> Stashed changes
 
         public Form1()
         {
@@ -31,6 +37,13 @@ namespace autoBTD6
             abilityPressInfoToolTip.ShowAlways = true;
             abilityPressInfoToolTip.SetToolTip(this.label9, "Random delay range between each ability being triggered.");
 
+            // hover info for BTD6ActiveWindow
+            BTD6ActiveWindowInfoToolTip.AutoPopDelay = 5000;
+            BTD6ActiveWindowInfoToolTip.InitialDelay = 100;
+            BTD6ActiveWindowInfoToolTip.ReshowDelay = 100;
+            BTD6ActiveWindowInfoToolTip.ShowAlways = true;
+            BTD6ActiveWindowInfoToolTip.SetToolTip(this.label12, "Only trigger ability keys if BTD6 is the active window. Stops it from triggering ability keys if you click out of BTD6 or another window. *Keep ON unless abilities are not being triggered in-game.*");
+
             // initialize ability cycle and ability press values
             abilityCycleComboBoxFrom.SelectedItem = "5";
             abilityCycleComboBoxTo.SelectedItem = "7";
@@ -43,14 +56,40 @@ namespace autoBTD6
                 string comboBoxName = "ability" + i + "ComboBox";
                 ComboBox comboBox = (ComboBox)this.Controls.Find(comboBoxName, true)[0];
                 comboBox.SelectedItem = "1";
-
             }
         }
 
         private async void startToggleButton_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             _eventHandler.ToggleStartButton();
             await _eventHandler.PressAbilities();
+=======
+            if (_isRunning)
+            {
+                _isRunning = false;
+                if (_mainThread !=null && _mainThread.IsAlive)
+                {
+                    _mainThread.Abort();
+                }
+                startToggleButton.Text = "Start";
+                _eventHandler.EnableAll();
+            }
+            else
+            {
+                _isRunning = true;
+                startToggleButton.Text = "Stop";
+                _eventHandler.DisableAll();
+
+                _eventHandler.ValidateAbilityCycleRange();
+                _eventHandler.ValidateAbilityPressRange();
+
+                PressAbilitiesParams pressAbilitiesParams = _eventHandler.PackageData();
+
+                _mainThread = new Thread(new ParameterizedThreadStart(_eventHandler.PressAbilities));
+                _mainThread.Start(pressAbilitiesParams);
+            }    
+>>>>>>> Stashed changes
         }
 
         // info for ability cycle
@@ -63,6 +102,11 @@ namespace autoBTD6
         private void label9_Click(object sender, EventArgs e)
         {
             abilityPressInfoToolTip.Show("Random delay range between each ability being triggered.", label9);
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            BTD6ActiveWindowInfoToolTip.Show("Only trigger ability keys if BTD6 is the active window. Stops it from triggering ability keys if you click out of BTD6 or another window. *Keep ON unless abilities are not being triggered in-game.*", label12);
         }
     }
 }
