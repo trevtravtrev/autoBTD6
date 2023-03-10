@@ -72,3 +72,7 @@ The following settings are available:
 | Ability Press (Seconds) Range    | A random delay in seconds after each ability has been triggered.                               |
 | BTD6 Active Window Only Checkbox | When on, ONLY activates ability keypresses in the active BTD6 game window. Keep ON unless abilities are not being triggered in game. When off, it will trigger ability keypresses in any active window. |
 | Start Button                     | Start or stop the program.                                                                       |
+
+## Disclaimer  
+
+The usage of this program is at your own risk. The author is not responsible for any damages or consequences caused by the usage of this program. It is recommended to use the program responsibly and within the terms of service of the game. Please note that using third-party tools to automate gameplay may violate the game's terms of service and result in a ban. Use at your own discretion.
