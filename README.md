@@ -62,7 +62,7 @@ autoBTD6 has following dependencies:
 
 ## Settings
 
-The following settings are available:
+It is recommended to stop autoBTD6 when you want to place a new tower then start it again. Ability triggering cancels tower placement.  
 
 | Settings                         | Description                                                                                     |
 |----------------------------------|-------------------------------------------------------------------------------------------------|
