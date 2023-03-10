@@ -39,11 +39,26 @@ autoBTD6 has following dependencies:
   <img src="interface.jpg" alt="interface" width="600" />
 </p>
 
-## How to use
+## How to run (simple)  
 
 1. Download the latest release from the [releases page](https://github.com/trevtravtrev/autoBTD6/releases).
 2. Extract the contents of the zip file to a location of your choice.
 3. Run `autoBTD6.exe`.
+4. Desktop Shortcut: right click autoBTD6.exe => "Send To" => Desktop (Create Shortcut).
+
+## How to run by building the project (hard)  
+
+1. Clone the repository or download the source code.
+2. Open the `autoBTD6.sln` solution file in Visual Studio.
+3. In the Solution Explorer window, right-click on the autoBTD6 project and select "Manage NuGet Packages".
+4. In the NuGet Package Manager, search for "AutoItX".
+5. Click on the "AutoItX" package and select the appropriate version for the project.
+6. Click on the "Install" button to add the package to your project.
+7. Build the project by selecting Build > Build Solution from the menu bar.
+8. After building, navigate to the `autoBTD6\bin\Debug` folder.
+9. Double-click the `autoBTD6.exe` file to run the program.
+10. Desktop Shortcut: right click autoBTD6.exe => "Send To" => Desktop (Create Shortcut).
+
 
 ## Settings
 
