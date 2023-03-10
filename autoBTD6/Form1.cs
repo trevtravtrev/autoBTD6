@@ -57,7 +57,7 @@ namespace autoBTD6
             }
         }
 
-        private async void startToggleButton_Click(object sender, EventArgs e)
+        private void startToggleButton_Click(object sender, EventArgs e)
         {
             if (_isRunning)
             {
