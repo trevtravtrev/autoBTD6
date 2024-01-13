@@ -42,6 +42,10 @@ namespace autoBTD6
             _abilityCheckBoxes.Add(form.ability7CheckBox);
             _abilityCheckBoxes.Add(form.ability8CheckBox);
             _abilityCheckBoxes.Add(form.ability9CheckBox);
+            _abilityCheckBoxes.Add(form.ability10CheckBox);
+            _abilityCheckBoxes.Add(form.ability11CheckBox);
+            _abilityCheckBoxes.Add(form.ability12CheckBox);
+
 
             // Add amount combo boxes to list
             _abilityComboBoxes.Add(form.ability1ComboBox);
@@ -53,6 +57,9 @@ namespace autoBTD6
             _abilityComboBoxes.Add(form.ability7ComboBox);
             _abilityComboBoxes.Add(form.ability8ComboBox);
             _abilityComboBoxes.Add(form.ability9ComboBox);
+            _abilityComboBoxes.Add(form.ability10ComboBox);
+            _abilityComboBoxes.Add(form.ability11ComboBox);
+            _abilityComboBoxes.Add(form.ability12ComboBox);
 
             // Delays
             _abilityCycleFrom = form.abilityCycleComboBoxFrom;
@@ -96,7 +103,22 @@ namespace autoBTD6
                                 if (BTD6 != IntPtr.Zero && GetForegroundWindow() == BTD6)
                                 {
                                     // trigger ability key
-                                    AutoItX.Send((i + 1).ToString());
+                                    if (i + 1 <= 9)
+                                    {
+                                        AutoItX.Send((i + 1).ToString());
+                                    }
+                                    else if (i + 1 == 10)
+                                    {
+                                        AutoItX.Send("0");
+                                    }
+                                    else if (i + 1 == 11)
+                                    {
+                                        AutoItX.Send("-");
+                                    }
+                                    else if (i + 1 == 12)
+                                    {
+                                        AutoItX.Send("=");
+                                    }
                                 }
                             }
                             else
@@ -105,7 +127,22 @@ namespace autoBTD6
                                 if (GetForegroundWindow() != pressAbilitiesParams.handle)
                                 {
                                     // trigger ability key
-                                    AutoItX.Send((i + 1).ToString());
+                                    if (i + 1 <= 9)
+                                    {
+                                        AutoItX.Send((i + 1).ToString());
+                                    }
+                                    else if (i + 1 == 10)
+                                    {
+                                        AutoItX.Send("0");
+                                    }
+                                    else if (i + 1 == 11)
+                                    {
+                                        AutoItX.Send("-");
+                                    }
+                                    else if (i + 1 == 12)
+                                    {
+                                        AutoItX.Send("=");
+                                    }
                                 }
                             }
                             Thread.Sleep(random.Next(pressAbilitiesParams.abilityPressComboBoxFrom, pressAbilitiesParams.abilityPressComboBoxTo));

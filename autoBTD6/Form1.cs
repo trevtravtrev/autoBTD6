@@ -49,7 +49,7 @@ namespace autoBTD6
             abilityPressComboBoxTo.SelectedItem = "0.3";
 
             // initialize ability amount combo boxes
-            for (int i = 1; i <= 9; i++)
+            for (int i = 1; i <= 12; i++)
             {
                 string comboBoxName = "ability" + i + "ComboBox";
                 ComboBox comboBox = (ComboBox)this.Controls.Find(comboBoxName, true)[0];

@@ -64,6 +64,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.BTD6ActiveWindow = new System.Windows.Forms.CheckBox();
+            this.ability12ComboBox = new System.Windows.Forms.ComboBox();
+            this.ability11ComboBox = new System.Windows.Forms.ComboBox();
+            this.ability10ComboBox = new System.Windows.Forms.ComboBox();
+            this.ability12CheckBox = new System.Windows.Forms.CheckBox();
+            this.ability11CheckBox = new System.Windows.Forms.CheckBox();
+            this.ability10CheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // ability1ComboBox
@@ -555,7 +561,7 @@
             // startToggleButton
             // 
             this.startToggleButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.startToggleButton.Location = new System.Drawing.Point(321, 314);
+            this.startToggleButton.Location = new System.Drawing.Point(321, 417);
             this.startToggleButton.Name = "startToggleButton";
             this.startToggleButton.Size = new System.Drawing.Size(299, 50);
             this.startToggleButton.TabIndex = 30;
@@ -697,7 +703,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(318, 209);
+            this.label10.Location = new System.Drawing.Point(318, 143);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(134, 13);
             this.label10.TabIndex = 33;
@@ -707,7 +713,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(318, 187);
+            this.label11.Location = new System.Drawing.Point(318, 121);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 13);
             this.label11.TabIndex = 34;
@@ -717,7 +723,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Script MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(449, 203);
+            this.label12.Location = new System.Drawing.Point(449, 137);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(27, 25);
             this.label12.TabIndex = 35;
@@ -730,18 +736,156 @@
             this.BTD6ActiveWindow.Checked = true;
             this.BTD6ActiveWindow.CheckState = System.Windows.Forms.CheckState.Checked;
             this.BTD6ActiveWindow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTD6ActiveWindow.Location = new System.Drawing.Point(478, 209);
+            this.BTD6ActiveWindow.Location = new System.Drawing.Point(478, 143);
             this.BTD6ActiveWindow.Margin = new System.Windows.Forms.Padding(10);
             this.BTD6ActiveWindow.Name = "BTD6ActiveWindow";
             this.BTD6ActiveWindow.Size = new System.Drawing.Size(15, 14);
             this.BTD6ActiveWindow.TabIndex = 36;
             this.BTD6ActiveWindow.UseVisualStyleBackColor = true;
             // 
+            // ability12ComboBox
+            // 
+            this.ability12ComboBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.ability12ComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ability12ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ability12ComboBox.FormattingEnabled = true;
+            this.ability12ComboBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.ability12ComboBox.Location = new System.Drawing.Point(127, 446);
+            this.ability12ComboBox.Name = "ability12ComboBox";
+            this.ability12ComboBox.Size = new System.Drawing.Size(39, 21);
+            this.ability12ComboBox.TabIndex = 48;
+            // 
+            // ability11ComboBox
+            // 
+            this.ability11ComboBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.ability11ComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ability11ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ability11ComboBox.FormattingEnabled = true;
+            this.ability11ComboBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.ability11ComboBox.Location = new System.Drawing.Point(127, 409);
+            this.ability11ComboBox.Name = "ability11ComboBox";
+            this.ability11ComboBox.Size = new System.Drawing.Size(39, 21);
+            this.ability11ComboBox.TabIndex = 47;
+            // 
+            // ability10ComboBox
+            // 
+            this.ability10ComboBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.ability10ComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ability10ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ability10ComboBox.FormattingEnabled = true;
+            this.ability10ComboBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.ability10ComboBox.Location = new System.Drawing.Point(127, 372);
+            this.ability10ComboBox.Name = "ability10ComboBox";
+            this.ability10ComboBox.Size = new System.Drawing.Size(39, 21);
+            this.ability10ComboBox.TabIndex = 46;
+            // 
+            // ability12CheckBox
+            // 
+            this.ability12CheckBox.AutoSize = true;
+            this.ability12CheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ability12CheckBox.Location = new System.Drawing.Point(32, 448);
+            this.ability12CheckBox.Margin = new System.Windows.Forms.Padding(10);
+            this.ability12CheckBox.Name = "ability12CheckBox";
+            this.ability12CheckBox.Size = new System.Drawing.Size(68, 17);
+            this.ability12CheckBox.TabIndex = 39;
+            this.ability12CheckBox.Text = "Ability 12";
+            this.ability12CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ability11CheckBox
+            // 
+            this.ability11CheckBox.AutoSize = true;
+            this.ability11CheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ability11CheckBox.Location = new System.Drawing.Point(32, 411);
+            this.ability11CheckBox.Margin = new System.Windows.Forms.Padding(10);
+            this.ability11CheckBox.Name = "ability11CheckBox";
+            this.ability11CheckBox.Size = new System.Drawing.Size(68, 17);
+            this.ability11CheckBox.TabIndex = 38;
+            this.ability11CheckBox.Text = "Ability 11";
+            this.ability11CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ability10CheckBox
+            // 
+            this.ability10CheckBox.AutoSize = true;
+            this.ability10CheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ability10CheckBox.Location = new System.Drawing.Point(32, 374);
+            this.ability10CheckBox.Margin = new System.Windows.Forms.Padding(10);
+            this.ability10CheckBox.Name = "ability10CheckBox";
+            this.ability10CheckBox.Size = new System.Drawing.Size(68, 17);
+            this.ability10CheckBox.TabIndex = 37;
+            this.ability10CheckBox.Text = "Ability 10";
+            this.ability10CheckBox.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 387);
+            this.ClientSize = new System.Drawing.Size(669, 490);
+            this.Controls.Add(this.ability12ComboBox);
+            this.Controls.Add(this.ability11ComboBox);
+            this.Controls.Add(this.ability10ComboBox);
+            this.Controls.Add(this.ability12CheckBox);
+            this.Controls.Add(this.ability11CheckBox);
+            this.Controls.Add(this.ability10CheckBox);
             this.Controls.Add(this.BTD6ActiveWindow);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -822,6 +966,12 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.CheckBox BTD6ActiveWindow;
+        public System.Windows.Forms.ComboBox ability12ComboBox;
+        public System.Windows.Forms.ComboBox ability11ComboBox;
+        public System.Windows.Forms.ComboBox ability10ComboBox;
+        public System.Windows.Forms.CheckBox ability12CheckBox;
+        public System.Windows.Forms.CheckBox ability11CheckBox;
+        public System.Windows.Forms.CheckBox ability10CheckBox;
     }
 }
 
